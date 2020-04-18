@@ -1,0 +1,10 @@
+#select a.cart_id from 
+#(select cart_id from cart_products where name = '우유') as a inner join
+#(select cart_id from cart_products where name = '요거트') as b 
+#on a.cart_id = b.cart_id
+
+
+select a.cart_id from 
+cart_products as a inner join
+cart_products as b 
+on a.cart_id = b.cart_id and a.name = '우유' and b.name = '요거트'
