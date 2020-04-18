@@ -1,4 +1,5 @@
 select b.animal_id, b.name from
 animal_outs as b left join
 animal_ins as a 
-on a.animal_id = b.animal_id
+on a.animal_id = b.animal_id 
+where a.animal_id is null
